@@ -9,7 +9,7 @@ public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme(); // Tipo referência
         meuFilme.setNome("O Hobbit"); //é o que faz refêrencia a this
-        meuFilme.setAnoDeLancamento (2011);
+        meuFilme.setAnoDeLancamento (2010);
         meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
