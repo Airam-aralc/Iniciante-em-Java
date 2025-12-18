@@ -5,7 +5,7 @@ public class Principal {
 
     public static void main (String[] args){
         Podcast podcast = new Podcast();
-        podcast.setTituloPodcast("Como a tecnologia muda o mundo");
+        podcast.setTituloPodcast("Como a tecnologia muda o mundo?");
         podcast.setDuracao(55000);
         podcast.setTotalDeReproducao(10000);
         podcast.setCurtidas(5000);
