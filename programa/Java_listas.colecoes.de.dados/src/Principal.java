@@ -4,13 +4,15 @@ import br.com.alura.javaListasColecoesDeDados.modelos.Episodios;
 import br.com.alura.javaListasColecoesDeDados.modelos.Filme;
 import br.com.alura.javaListasColecoesDeDados.modelos.Series;
 
+import java.util.ArrayList;
+
 public class Principal {
 
     public static void main(String[] args) {
         Filme meuFilme = new Filme(); // Tipo referência
         meuFilme.setNome("O Hobbit"); //é o que faz refêrencia a this
-        meuFilme.setAnoDeLancamento (2010);
-        meuFilme.setDuracaoEmMinutos(180);
+        meuFilme.setAnoDeLancamento (2012);
+        meuFilme.setDuracaoEmMinutos(160);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(8);
@@ -20,6 +22,27 @@ public class Principal {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacao());
         System.out.println("Média das avaliações: " + meuFilme.pegaMedia());
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
+
+        //Criado dois outros filmes para treinar com o ArrayList
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Senhor dos anéis: Sociedade do anel");
+        outroFilme.setAnoDeLancamento(2001);
+        outroFilme.setDuracaoEmMinutos(178);
+        outroFilme.avalia(10);
+
+        Filme maisUmFilme = new Filme();
+        maisUmFilme.setNome("Senhor dos anés: O retorno do rei");
+        maisUmFilme.setAnoDeLancamento(2002);
+        maisUmFilme.setDuracaoEmMinutos(180);
+        maisUmFilme.avalia(9.5);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>(); // irá armazenar os filmes
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        listaDeFilmes.add(maisUmFilme);
+        System.out.println("\nTamanho da lista: " + listaDeFilmes.size()); //mostrar o tamanho da lista
+        System.out.println("Primeiro Filme: " + listaDeFilmes.get(0).getNome()); //vai pegar o primeiro filme, começa em 0 e ele vai pegar o nome do filme
+        System.out.println(listaDeFilmes);
 
         Series series = new Series();
         series.setNome("Lost");
@@ -31,15 +54,11 @@ public class Principal {
 
         System.out.println("Duração para maratonar " + series.getNome() + ": " + series.getDuracaoEmMinutos());
 
-        //Foi criado outro filme para testar a calculadora
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Senhor dos anéis");
-        outroFilme.setAnoDeLancamento (2014);
-        outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(meuFilme);
         calculadora.inclui(outroFilme);
+        calculadora.inclui(maisUmFilme);
         calculadora.inclui(series);
         System.out.println(calculadora.getTempoTotal());
 
