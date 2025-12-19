@@ -20,6 +20,7 @@ public class CalculadoraDeTempo {
 //        tempoTotal += s.getDuracaoEmMinutos();
 //    }
 
+    //Foi aplicado o polimorfismo ao invés de incluir Filme e Serie só incluiu o Titulo
     public void inclui(Titulo titulo){ //Foi feito o "Polimorfismo" para o código ficar mais "limpo"
         tempoTotal += titulo.getDuracaoEmMinutos();
     }

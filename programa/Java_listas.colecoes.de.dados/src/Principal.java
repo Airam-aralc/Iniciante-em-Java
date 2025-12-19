@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
-        Filme meuFilme = new Filme(); // Tipo referência
-        meuFilme.setNome("O Hobbit"); //é o que faz refêrencia a this
+        Filme meuFilme = new Filme("O Hobbit");
+        //meuFilme.setNome("O Hobbit"); //Ao criar o construtor essa linha some e o nome do filme vai direto em Filme("...")
         meuFilme.setAnoDeLancamento (2012);
         meuFilme.setDuracaoEmMinutos(160);
 
@@ -23,15 +23,15 @@ public class Principal {
         System.out.println("Média das avaliações: " + meuFilme.pegaMedia());
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
-        //Criado dois outros filmes para treinar com o ArrayList
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Senhor dos anéis: Sociedade do anel");
+        Filme outroFilme = new Filme("Senhor dos anéis: Sociedade do anel");
+        //outroFilme.setNome("Senhor dos anéis: Sociedade do anel");
         outroFilme.setAnoDeLancamento(2001);
         outroFilme.setDuracaoEmMinutos(178);
         outroFilme.avalia(10);
 
-        Filme maisUmFilme = new Filme();
-        maisUmFilme.setNome("Senhor dos anés: O retorno do rei");
+        //Criação do construtor
+        Filme maisUmFilme = new Filme("Senhor dos anéis: O retorno do rei");
+        //maisUmFilme.setNome("Senhor dos anés: O retorno do rei");
         maisUmFilme.setAnoDeLancamento(2002);
         maisUmFilme.setDuracaoEmMinutos(180);
         maisUmFilme.avalia(9.5);
@@ -44,6 +44,7 @@ public class Principal {
         System.out.println("Primeiro Filme: " + listaDeFilmes.get(0).getNome()); //vai pegar o primeiro filme, começa em 0 e ele vai pegar o nome do filme
         System.out.println(listaDeFilmes); //apareceu o nome e data de lançamento dos filmes depois de modificar o toString na classe Filme
         System.out.println("toString do filme " + listaDeFilmes.get(0).toString()); //toString() é um metodo que tem como objetivo retornar uma representação em texto de um objeto
+
 
 
         Series series = new Series();

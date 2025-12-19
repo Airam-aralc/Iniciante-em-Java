@@ -7,6 +7,11 @@ import br.com.alura.javaListasColecoesDeDados.calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel { //Vai pegar todas as informações na classe Titulo e juntar com as presentes nesta classe
     private String diretor;
 
+    //Criou um construtor
+    public Filme(String nome) {
+        this.setNome(nome);
+    }
+
     public String getDiretor() {
         return diretor;
     }
