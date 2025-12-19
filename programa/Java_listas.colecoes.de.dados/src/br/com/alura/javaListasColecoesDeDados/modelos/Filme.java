@@ -18,4 +18,9 @@ public class Filme extends Titulo implements Classificavel { //Vai pegar todas a
     public int getClassificacao() {
         return (int) pegaMedia() / 2; //cast - converter um tipo de dado em outro
     }
+
+    @Override //Sobrescrita da toString
+    public String toString() {
+        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
+    }
 }

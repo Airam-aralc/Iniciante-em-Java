@@ -42,7 +42,9 @@ public class Principal {
         listaDeFilmes.add(maisUmFilme);
         System.out.println("\nTamanho da lista: " + listaDeFilmes.size()); //mostrar o tamanho da lista
         System.out.println("Primeiro Filme: " + listaDeFilmes.get(0).getNome()); //vai pegar o primeiro filme, começa em 0 e ele vai pegar o nome do filme
-        System.out.println(listaDeFilmes);
+        System.out.println(listaDeFilmes); //apareceu o nome e data de lançamento dos filmes depois de modificar o toString na classe Filme
+        System.out.println("toString do filme " + listaDeFilmes.get(0).toString()); //toString() é um metodo que tem como objetivo retornar uma representação em texto de um objeto
+
 
         Series series = new Series();
         series.setNome("Lost");
