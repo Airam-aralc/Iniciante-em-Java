@@ -8,6 +8,11 @@ public class Series extends Titulo{
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
 
+    //Para chamar o construtor de Título
+    public Series(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
+
     public boolean isAtiva() {
         return ativa;
     }

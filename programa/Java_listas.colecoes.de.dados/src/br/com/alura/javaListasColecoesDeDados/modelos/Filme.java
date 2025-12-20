@@ -8,8 +8,8 @@ public class Filme extends Titulo implements Classificavel { //Vai pegar todas a
     private String diretor;
 
     //Criou um construtor
-    public Filme(String nome) {
-        this.setNome(nome);
+    public Filme(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
     }
 
     public String getDiretor() {

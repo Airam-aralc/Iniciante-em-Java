@@ -9,9 +9,9 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("O Hobbit");
+        Filme meuFilme = new Filme("O Hobbit", 2012);
         //meuFilme.setNome("O Hobbit"); //Ao criar o construtor essa linha some e o nome do filme vai direto em Filme("...")
-        meuFilme.setAnoDeLancamento (2012);
+        //meuFilme.setAnoDeLancamento (2012);
         meuFilme.setDuracaoEmMinutos(160);
 
         meuFilme.exibeFichaTecnica();
@@ -23,16 +23,16 @@ public class Principal {
         System.out.println("Média das avaliações: " + meuFilme.pegaMedia());
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme("Senhor dos anéis: Sociedade do anel");
+        Filme outroFilme = new Filme("Senhor dos anéis: Sociedade do anel", 2001);
         //outroFilme.setNome("Senhor dos anéis: Sociedade do anel");
-        outroFilme.setAnoDeLancamento(2001);
+        //outroFilme.setAnoDeLancamento(2001);
         outroFilme.setDuracaoEmMinutos(178);
         outroFilme.avalia(10);
 
         //Criação do construtor
-        Filme maisUmFilme = new Filme("Senhor dos anéis: O retorno do rei");
+        Filme maisUmFilme = new Filme("Senhor dos anéis: O retorno do rei", 2002);
         //maisUmFilme.setNome("Senhor dos anés: O retorno do rei");
-        maisUmFilme.setAnoDeLancamento(2002);
+        //maisUmFilme.setAnoDeLancamento(2002);
         maisUmFilme.setDuracaoEmMinutos(180);
         maisUmFilme.avalia(9.5);
 
@@ -47,9 +47,9 @@ public class Principal {
 
 
 
-        Series series = new Series();
-        series.setNome("Lost");
-        series.setAnoDeLancamento(2000);
+        Series series = new Series("Lost", 2000);
+        //series.setNome("Lost");
+        //series.setAnoDeLancamento(2000);
         series.exibeFichaTecnica();
         series.setTemporadas(8);
         series.setEpisodiosPorTemporada(12);

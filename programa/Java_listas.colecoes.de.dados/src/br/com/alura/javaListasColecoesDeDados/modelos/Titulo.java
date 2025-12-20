@@ -10,7 +10,11 @@ public class Titulo {
     private int totalDeAvaliacao;
     private int duracaoEmMinutos;
 
-    //METODOS - Maneira de fazer tal coisa
+    //Esse construtor servirá tanto para Filme como para Séries
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
 
     public void exibeFichaTecnica() {
         System.out.println("\nNome: " + nome);
