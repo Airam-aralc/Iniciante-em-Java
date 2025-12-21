@@ -1,3 +1,5 @@
+package br.com.alura.javaListasColecoesDeDados.principal;
+
 import br.com.alura.javaListasColecoesDeDados.calculos.CalculadoraDeTempo;
 import br.com.alura.javaListasColecoesDeDados.calculos.FiltroRecomendacao;
 import br.com.alura.javaListasColecoesDeDados.modelos.Episodios;

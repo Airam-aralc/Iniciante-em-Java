@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java_listas.colecoes.de.dados/Java_listas.colecoes.de.dados.iml" filepath="$PROJECT_DIR$/Java_listas.colecoes.de.dados/Java_listas.colecoes.de.dados.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aula1/aula1.iml" filepath="$PROJECT_DIR$/aula1/aula1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aula2/aula2.iml" filepath="$PROJECT_DIR$/aula2/aula2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aula3/aula3.iml" filepath="$PROJECT_DIR$/aula3/aula3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aula4/aula4.iml" filepath="$PROJECT_DIR$/aula4/aula4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_listas.colecoes.de.dados/desafioModulo1/desafioModulo1.iml" filepath="$PROJECT_DIR$/Java_listas.colecoes.de.dados/desafioModulo1/desafioModulo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo4/desafios/desafios.iml" filepath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo4/desafios/desafios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_listas.colecoes.de.dados/desafios2/desafios2.iml" filepath="$PROJECT_DIR$/Java_listas.colecoes.de.dados/desafios2/desafios2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-word/hello-word.iml" filepath="$PROJECT_DIR$/hello-word/hello-word.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo1/modulo1.iml" filepath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo1/modulo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo2/modulo2.iml" filepath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo2/modulo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo3/modulo3.iml" filepath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo3/modulo3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo4/modulo4.iml" filepath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo4/modulo4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo5/modulo5.iml" filepath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo5/modulo5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/programa.iml" filepath="$PROJECT_DIR$/.idea/programa.iml" />
+    </modules>
+  </component>
+</project>

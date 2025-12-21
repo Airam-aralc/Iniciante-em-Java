@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eee0c329-46ed-438a-94b8-55c7ce1773cc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo1/modulo1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo2/modulo2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo3/modulo3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo4/desafios/desafios.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo4/modulo4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_aplicando.orientacao.objetos/modulo5/modulo5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_listas.colecoes.de.dados/Java_listas.colecoes.de.dados.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_listas.colecoes.de.dados/desafioModulo1/desafioModulo1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_listas.colecoes.de.dados/desafios2/desafios2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aula1/aula1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aula2/aula2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aula3/aula3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aula4/aula4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-word/hello-word.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="378LOkMZiTMJq7R6PcVoV2WiSHJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eee0c329-46ed-438a-94b8-55c7ce1773cc" name="Changes" comment="" />
+      <created>1766279721911</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1766279721911</updated>
+    </task>
+    <servers />
+  </component>
+</project>
