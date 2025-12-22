@@ -2,7 +2,10 @@
 
 package br.com.alura.javaListasColecoesDeDados.modelos;
 
-public class Titulo {
+import java.util.Collection;
+import java.util.Comparator;
+
+public class Titulo implements Comparable <Titulo> { //Para conseguir comparar diferentes elementos
     private String nome; //String é uma classe, veja no Java Doc
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -71,5 +74,10 @@ public class Titulo {
 
     public int getDuracaoEmMinutos() {
         return duracaoEmMinutos;
+    }
+
+    @Override //Para implementar o Comparable
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome()); //pelo nome do filme irei fazer a comparação dos filmes e séries
     }
 }

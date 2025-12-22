@@ -5,15 +5,17 @@ import br.com.alura.javaListasColecoesDeDados.modelos.Series;
 import br.com.alura.javaListasColecoesDeDados.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class PrincipalComListas {
 
     public static void main(String[] args) {
-        Filme meuFilme = new Filme("O Hobbit", 2012);
-        meuFilme.avalia(8);
-        Filme outroFilme = new Filme("Senhor dos anéis: Sociedade do anel", 2001);
-        outroFilme.avalia(10);
-        Filme maisUmFilme = new Filme("Senhor dos anéis: O retorno do rei", 2002);
+        Filme meuFilme = new Filme("Senhor dos anéis: Sociedade do anel", 2001);
+        meuFilme.avalia(10);
+        Filme outroFilme = new Filme("O Hobbit", 2012);
+        outroFilme.avalia(8);
+        Filme maisUmFilme = new Filme("O Senhor dos anéis: O retorno do rei", 2002);
         maisUmFilme.avalia(9.5);
         Series series = new Series("Lost", 2000);
         series.avalia(7);
@@ -33,5 +35,19 @@ public class PrincipalComListas {
                 System.out.println("Classificação do filme: " + filme.getClassificacao());
             }
         }
+
+        //ordenando listas
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Leonardo Da Vinci");
+        buscaPorArtista.add("Pablo Pícasso");
+        buscaPorArtista.add("Arlindo Cruz");
+        System.out.println(buscaPorArtista);
+
+        Collections.sort(buscaPorArtista); //ordem alfabética
+        System.out.println("Depois da ordenação");
+        System.out.println(buscaPorArtista);
+        System.out.println("Lista de título depois da ordenação");
+        Collections.sort(lista);
+        System.out.println(lista);
     }
 }
