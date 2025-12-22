@@ -18,6 +18,8 @@ public class PrincipalComListas {
         Series series = new Series("Lost", 2000);
         series.avalia(7);
 
+        Filme f1 = maisUmFilme; //variável de referência, não é a criação de outro objeto
+
         ArrayList<Titulo> lista = new ArrayList<>(); // irá armazenar os filmes
         lista.add(meuFilme);
         lista.add(outroFilme);
@@ -26,8 +28,9 @@ public class PrincipalComListas {
 
         for (Titulo item: lista){
             System.out.println(item.getNome());
-            Filme filme = (Filme) item;
-            System.out.println("Classificação: " + filme.getClassificacao());
+            if (item instanceof Filme filme && filme.getClassificacao() > 2) { //Perguntar se é um filme ou uma série, já declarou o Filme como filme e colocou um comparador. Não é muito elegante, mas alguns códigos ainda é usado
+                System.out.println("Classificação do filme: " + filme.getClassificacao());
+            }
         }
     }
 }
