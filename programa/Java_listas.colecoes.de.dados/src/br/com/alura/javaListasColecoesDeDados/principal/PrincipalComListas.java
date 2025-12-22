@@ -19,6 +19,7 @@ public class PrincipalComListas {
         series.avalia(7);
 
         Filme f1 = maisUmFilme; //variável de referência, não é a criação de outro objeto
+        //f1.setNome(2000);
 
         ArrayList<Titulo> lista = new ArrayList<>(); // irá armazenar os filmes
         lista.add(meuFilme);
