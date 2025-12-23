@@ -4,9 +4,7 @@ import br.com.alura.javaListasColecoesDeDados.modelos.Filme;
 import br.com.alura.javaListasColecoesDeDados.modelos.Series;
 import br.com.alura.javaListasColecoesDeDados.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class PrincipalComListas {
 
@@ -21,9 +19,8 @@ public class PrincipalComListas {
         series.avalia(7);
 
         Filme f1 = maisUmFilme; //variável de referência, não é a criação de outro objeto
-        //f1.setNome(2000);
 
-        ArrayList<Titulo> lista = new ArrayList<>(); // irá armazenar os filmes
+        List<Titulo> lista = new LinkedList<>(); // irá armazenar os filmes
         lista.add(meuFilme);
         lista.add(outroFilme);
         lista.add(maisUmFilme);
@@ -37,7 +34,7 @@ public class PrincipalComListas {
         }
 
         //ordenando listas
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        List<String> buscaPorArtista = new LinkedList<>();
         buscaPorArtista.add("Leonardo Da Vinci");
         buscaPorArtista.add("Pablo Pícasso");
         buscaPorArtista.add("Arlindo Cruz");
@@ -48,6 +45,9 @@ public class PrincipalComListas {
         System.out.println(buscaPorArtista);
         System.out.println("Lista de título depois da ordenação");
         Collections.sort(lista);
+        System.out.println(lista);
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento)); //Comparador
+        System.out.println("Ordenando por ano");
         System.out.println(lista);
     }
 }
