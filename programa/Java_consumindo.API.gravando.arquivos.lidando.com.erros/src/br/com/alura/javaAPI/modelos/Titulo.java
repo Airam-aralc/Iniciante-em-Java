@@ -2,14 +2,18 @@
 
 package br.com.alura.javaAPI.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Collection;
 import java.util.Comparator;
 
-public class Titulo implements Comparable <Titulo> { //Para conseguir comparar diferentes elementos
-    private String nome; //String é uma classe, veja no Java Doc
+public class Titulo implements Comparable <Titulo> {
+    @SerializedName("Title") //usou uma anotação para a variável nome
+    private String nome;
+    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
-    private double somaAvaliacoes; // modificadores de acesso
+    private double somaAvaliacoes;
     private int totalDeAvaliacao;
     private int duracaoEmMinutos;
 
@@ -17,6 +21,12 @@ public class Titulo implements Comparable <Titulo> { //Para conseguir comparar d
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public Titulo(TituloOmdb meuTituloOmdb) {
+        this.nome = meuTituloOmdb.title();
+        this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
+        this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,2));
     }
 
     public void exibeFichaTecnica() {
@@ -79,5 +89,12 @@ public class Titulo implements Comparable <Titulo> { //Para conseguir comparar d
     @Override //Para implementar o Comparable
     public int compareTo(Titulo outroTitulo) {
         return this.getNome().compareTo(outroTitulo.getNome()); //pelo nome do filme irei fazer a comparação dos filmes e séries
+    }
+
+    @Override
+    public String toString() {
+        return "Nome = " + nome +
+                ", Ano de lançamento = " + anoDeLancamento + "," +
+                "duração = " + duracaoEmMinutos;
     }
 }
