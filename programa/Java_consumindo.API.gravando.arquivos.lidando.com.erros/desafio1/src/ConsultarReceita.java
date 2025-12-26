@@ -1,18 +1,18 @@
-import java.io.IOException; //adicionou uma exceção por causa do send
+import java.io.IOException; 
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
-public class ConsultarLivros{
+public class ConsultarReceita {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner leitura = new Scanner(System.in);
-        System.out.println("Digite um livro para busca"); //Se for um título composto tem que colocar o + para separar as palavras, não o espaço
+        System.out.println("Digite o nome da receita para busca:");
         var busca = leitura.nextLine();
 
-        String endereco = "https://www.googleapis.com/books/v1/volumes?q=" + busca + "&apikey=AIzaSyB1pEZIMa_K8UKf9baqKQhq1sSxBiLz1_U"; //minha chave API gerei no google Book: AIzaSyB1pEZIMa_K8UKf9baqKQhq1sSxBiLz1_U
+        String endereco = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + busca; //não precisou da chave nesse site
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
