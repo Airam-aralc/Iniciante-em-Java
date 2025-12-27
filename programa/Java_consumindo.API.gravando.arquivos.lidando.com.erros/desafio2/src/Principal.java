@@ -1,19 +1,24 @@
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class Principal {
 
-    public static void main (String[] args){
+    public static void main(String[] args){
         String jsonPesssoa = """
                 {  
                     "nome": "Maria",
-                    "idade": 21,
-                    "cidade": "Belo Horizonte"
+                    "idade": 21
                 }
                 """; //Text Blocks
 
-        Gson gson = new Gson(); //importou o Gson do google pelo "Project Structure"
-        Pessoa pessoa = gson.fromJson(jsonPesssoa, Pessoa.class);
+        //Personalizar para criar uma instância personalizada com o GsonBuilder
+        Gson gson = new GsonBuilder()
+                .setLenient() //torna o analisador mais tolerante a erros JSON
+                .create();
 
-        System.out.println("Objeto pessoa: " + pessoa);
+        //Transformando a String Json em um Objeto Pessoa
+        Pessoa pessoa = gson.fromJson(jsonPesssoa, Pessoa.class); //o primeiro é a string, o segundo é para que classe converter
+
+        System.out.println(pessoa);
     }
 }
