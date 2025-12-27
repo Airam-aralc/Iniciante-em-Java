@@ -2,15 +2,16 @@
 
 package br.com.alura.javaAPI.modelos;
 
+import br.com.alura.javaAPI.excecao.ErroDeConversaoDeAnoException;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Collection;
 import java.util.Comparator;
 
 public class Titulo implements Comparable <Titulo> {
-    @SerializedName("Title") //usou uma anotação para a variável nome
+    //@SerializedName("Title") //usou uma anotação para a variável nome
     private String nome;
-    @SerializedName("Year")
+    //@SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private double somaAvaliacoes;
@@ -25,8 +26,13 @@ public class Titulo implements Comparable <Titulo> {
 
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title();
+
+        //Criação da minha própria exceção
+        if (meuTituloOmdb.year().length() > 4){
+            throw new ErroDeConversaoDeAnoException("Não consegui converter o ano porque tem mais de 4 caracteres");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
-        this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,2));
+        this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,3));
     }
 
     public void exibeFichaTecnica() {
