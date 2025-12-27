@@ -34,7 +34,7 @@ public class PincipalComBusca{
         System.out.println(json);
 
         Gson gson = new GsonBuilder()
-                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)  //Para indicar que o Títlo vem com letra maiúscula, evitando o erro de não encontrar a variável pq ela está com letra minúscula
                 .create();
 
         TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
