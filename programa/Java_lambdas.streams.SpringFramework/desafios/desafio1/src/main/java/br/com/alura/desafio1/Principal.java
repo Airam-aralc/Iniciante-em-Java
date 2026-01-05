@@ -9,15 +9,15 @@ public class Principal {
     public static void main(String[] args) {
         Tarefa tarefa = new Tarefa("Finalizar desafio de serialização", false, "Maria Clara");
 
-        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper();
 
         try {
             File arquivo = new File("tarefa.json");
-            objectMapper.writeValue(arquivo, tarefa);
+            mapper.writeValue(arquivo, tarefa);
 
             System.out.println("Arquivo tarefa.json criado com sucesso!");
 
-            Tarefa tarefaLida = objectMapper.readValue(new File("tarefa.json"), Tarefa.class);
+            Tarefa tarefaLida = mapper.readValue(new File("tarefa.json"), Tarefa.class);
             System.out.println("\nTarefa lida");
             System.out.println(tarefaLida);
 
