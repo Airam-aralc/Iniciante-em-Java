@@ -8,6 +8,7 @@ public class ConversorMaiusculo {
 
             List<String> palavras = Arrays.asList("java", "stream", "lambda");
 
+            //Converte maiúsculo para minúsculo
             palavras.stream()
                     .map(String::toUpperCase)
                     .forEach(System.out::println);
