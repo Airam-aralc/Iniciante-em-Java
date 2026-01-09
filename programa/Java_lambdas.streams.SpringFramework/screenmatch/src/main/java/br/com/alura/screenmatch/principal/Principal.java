@@ -103,7 +103,7 @@ public class Principal {
 
         System.out.println(avaliacaoPorTemporada);
 
-        //Coletando estatísticas 
+        //Coletando estatísticas
         DoubleSummaryStatistics est = episodios.stream()
                 .filter(e -> e.getAvaliacao() > 0.0)
                 .collect(Collectors.summarizingDouble(Episodio::getAvaliacao));
