@@ -9,10 +9,7 @@ import br.com.alura.screenmatch.service.ConverteDados;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Principal {
@@ -50,11 +47,16 @@ public class Principal {
                 .collect(Collectors.toList());
 
         //Pegar os cinco melhores episodios
-        System.out.println("\nTOP 5 episódios:");
+        System.out.println("\nTOP 10 episódios:");
         dadosEpisodios.stream()
                 .filter(e -> !e.avaliacao().equalsIgnoreCase("N/A"))
+                //.peek(e -> System.out.println("Primeiro filtro (N/A) " + e))
                 .sorted(Comparator.comparing(DadosEpisodio::avaliacao).reversed())
-                .limit(5)
+                //.peek(e -> System.out.println("Ordenação " + e))
+                .limit(10)
+                //.peek(e -> System.out.println("Limite " + e))
+                .map(e -> e.titulo().toUpperCase())
+                //.peek(e -> System.out.println("Mapeamento " + e))
                 .forEach(System.out::println);
 
         List<Episodio> episodios = temporadas.stream()
@@ -63,6 +65,20 @@ public class Principal {
                 ).collect(Collectors.toList());
 
         episodios.forEach(System.out::println);
+
+        System.out.println("Digite um trecho do título para buscar:");
+        var trechoTitulo = leitura.nextLine();
+
+        Optional<Episodio> episodioBusca = episodios.stream()
+                .filter(e -> e.getTitulo().toUpperCase().contains(trechoTitulo.toUpperCase())) //coloca o titulo digitado pelo usuário e o da API tudo em maiúsculo
+                .findFirst();
+
+        if(episodioBusca.isPresent()){
+            System.out.println("Encontrei o episódio!");
+            System.out.println("Temporada: " + episodioBusca.get().getTemporada());
+        } else {
+            System.out.println("Episodio não encontrado");
+        }
 
         System.out.println("A partir de que ano você quer ver os episódios?");
         var ano = leitura.nextInt(); // Usamos nextInt para capturar o número diretamente
