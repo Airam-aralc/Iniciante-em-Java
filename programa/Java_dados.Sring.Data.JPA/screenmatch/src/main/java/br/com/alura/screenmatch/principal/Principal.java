@@ -72,10 +72,4 @@ public class Principal {
         }
         temporadas.forEach(System.out::println);
     }
-
-    //O main apenas inicia a execução
-    public static void main(String[] args) {
-        Principal principal = new Principal();
-        principal.exibeMenu();
-    }
 }
