@@ -1,17 +1,28 @@
 package br.com.alura.screenmatch.model;
 
 import br.com.alura.screenmatch.service.traducao.ConsultaMyMemory;
+import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.OptionalDouble;
 
-public class Serie {
+@Entity //indica que a classe Serie será uma tabela no banco
+@Table(name = "series") //o nome dessa tabela no banco será series
 
+public class Serie {
+    @Id //inicando que aquele será o seu id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //a estratégia de geração
+    private Long id;
+
+    @Column(unique = true) //Os títulos não podem se repetir
     private String titulo;
 
     private Integer totalTemporadas;
 
     private Double avaliacao;
 
+    @Enumerated(EnumType.STRING)
     private Categoria genero;
 
     private String atores;
@@ -19,6 +30,11 @@ public class Serie {
     private String poster;
 
     private String sinopse;
+
+    @Transient //ignora isso por enquanto
+    private List<Episodio> episodios = new ArrayList<>();
+
+    public Serie(){} //construtor padrão
 
     public Serie(DadosSerie dadosSerie){
         this.titulo = dadosSerie.titulo();
@@ -28,6 +44,20 @@ public class Serie {
         this.atores = dadosSerie.atores();
         this.poster = dadosSerie.poster();
         this.sinopse = ConsultaMyMemory.obterTraducao(dadosSerie.sinopse()).trim();
+    }
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<Episodio> getEpisodios() {
+        return episodios;
+    }
+    public void setEpisodios(List<Episodio> episodios) {
+        this.episodios = episodios;
     }
 
     public String getTitulo() {
