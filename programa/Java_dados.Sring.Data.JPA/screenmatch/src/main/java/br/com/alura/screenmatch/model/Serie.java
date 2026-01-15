@@ -31,7 +31,7 @@ public class Serie {
 
     private String sinopse;
 
-    @Transient //ignora isso por enquanto
+    @OneToMany(mappedBy = "serie", cascade = CascadeType.ALL) //cardinalidade - banco de dados
     private List<Episodio> episodios = new ArrayList<>();
 
     public Serie(){} //construtor padrão
