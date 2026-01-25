@@ -34,7 +34,7 @@ public class SerieController {
         return servico.obterLancamentos();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}") //as chaves são para elementos dinâmicos
     public SerieDTO obterPorId(@PathVariable Long id){
         return servico.obterPorId(id);
     }
@@ -42,5 +42,16 @@ public class SerieController {
     @GetMapping("/{id}/temporadas/todas")
     public List<EpisodioDTO> obterTodasTemporadas(@PathVariable Long id){
         return servico.obterTodasAsTemporadas(id);
+    }
+
+    @GetMapping("/{id}/temporadas/{numero}")
+    public List<EpisodioDTO> obterTemporadasPorNumero(@PathVariable Long id, @PathVariable Long numero){
+        return servico.obterTemporadaPorNumero(id, numero);
+    }
+
+    @GetMapping("/categoria/{nomeGenero}")
+
+    public List<SerieDTO> obterSeriesPorCategoria(@PathVariable String nomeGenero){
+        return servico.obterSeriesPorCategoria(nomeGenero);
     }
 }
