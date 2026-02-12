@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service //anotação do Spring para informar que aquela classe irá fazer um serviço
-public class AutentificacaoService implements UserDetailsService { //interface implementada para representar um serviço de autentificação nessa classe
+public class AutenticacaoService implements UserDetailsService { //interface implementada para representar um serviço de autentificação nessa classe
 
     @Autowired
     private UsuarioRepository repository;
